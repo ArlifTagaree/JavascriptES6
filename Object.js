@@ -37,3 +37,6 @@ const customer3 = {
 }
 customer3.showData() //วิธีการเรียนใช้ Method ให้เข้าไปที่object  customer3 ก่อน แล้วเรียกใช้ .showData()
 console.log(customer3);
+
+// for in used with object
+//for of used with array
