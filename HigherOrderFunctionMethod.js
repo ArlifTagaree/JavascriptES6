@@ -14,7 +14,7 @@ for (let i = 0; i < persons.length; i++){
 }
 console.log('Kids:',kids);
 
-//// เรียนใช้ .filter() ซึ่ง filter เป็น HigherOrder สามารถรับ argument เป็น function ใหม่ได้ โดยสร้าง function ใหม่ เป็น argument ของ filter รับค่าเป็น person ดดยจะทำการวนลูป array persons หลังจากนั้นจะ pass persons แต่ละ index เข้าไปใน function ใหม่ โดยอะไรก็ตามที่รีเทิร์นจาก function ใหม่จะถูก push เข้าไปใน array ตัวใหม่ที่ filter สร้าง
+//// เรียนใช้ .filter() ซึ่ง filter เป็น HigherOrder สามารถรับ argument เป็น function ใหม่ได้ โดยสร้าง function ใหม่ เป็น argument ของ filter รับค่าเป็น person โดยจะทำการวนลูป array persons หลังจากนั้นจะ pass persons แต่ละ index เข้าไปใน function ใหม่ โดยอะไรก็ตามที่รีเทิร์นจาก function ใหม่จะถูก push เข้าไปใน array ตัวใหม่ที่ filter สร้าง
 // const kids1 = persons.filter((person) =>{
 //     return person.age <= 15;
 // })
