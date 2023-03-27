@@ -65,3 +65,59 @@
     }
     run()
 })();
+// ---------------- Example async---------------
+async function asyncFunction() {
+    return 'Hello World'
+}
+
+asyncFunction()
+
+asyncFunction().then((resolValue)=> {
+    console.log(resolValue)
+})
+
+function asyncPromise() {
+    return new promise((resolve) => {
+          resolve ('hello world')
+      })
+   }
+//---------------- Example await---------------
+
+async function showering(){
+    let action1 = await sraphom() //ถ้าอยากได้ค่า ไม่ต้อง .then แล้ว แค่ต้อง await ใน async แต่ต้องมีตัวแปรมารับค่า
+    let action2 = await brushTeeth() 
+
+
+    //action 1 มารับค่า ที่ resolve มาจาก sraphom()[promise]
+    //action 2 มารับค่า ที่ resolve มาจาก brushTeeth()[promise]
+    console.log(action1 +' '+ action2);
+    
+}
+
+async function sraphom(){
+    return 'pompeak'
+}
+
+async function brushTeeth(){
+    return 'clean teeth'
+}
+
+showering()
+
+//exam 3
+
+async function addOne(params) {
+    return params+1
+}
+
+async function calculate(num1, num2) {
+    return num1 + num2
+}
+
+async function total () {
+    let result = await calculate(1, 1)
+    let addOneResult = await addOne(result)
+    
+    return addOneResult
+}
+console.log(total());
